@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/84b3f3b50e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <section class="container">
+            <div class="logo">
+                <a href="index.html">JosueV</a>
+            </div>
+            <button class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+                <i class="none fa-solid fa-xmark"></i>
+            </button>
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#acerca">Acerca</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </section>
+    </header>
+    <section id="inicio" class="home">
+        <article class="home_image" style="--home-image: url('./src/images/ryland-dean-rMyel7micAg-unsplash.jpg'); --home-attachment: fixed;">
+            <aside class="home_image_opacity" style="--home-opacity-color: var(--black-alpha-color)">
+                <div class="home_image_content">
+                    <h2 class="home_image_title" style="--home-text-color: var(--white-color)">
+                        Bienvenid@s<br>a mi Sitio!
+                    </h2>
+                    <a href="#contacto" class="btn">CONTACTAME</a>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+    <section id="acerca" class="about section_padding container full-lg-screen">
+        <article class="text-lg-right">
+            <aside class="about_title text-center text-lg-right">
+                <h1>Josue Ventura</h1>
+                <h5>Desarrollador <i>Web</i></h5>
+            </aside>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Accusamus iste tempore repellendus minus quasi aperiam. 
+                Veritatis accusamus consequatur animi distinctio eligendi 
+                asperiores nisi ratione consectetur.
+            </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Accusamus iste tempore repellendus minus quasi aperiam. 
+            </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Accusamus iste tempore repellendus minus quasi aperiam. 
+                asperiores nisi ratione consectetur.
+            </p>
+            <div class="text-center text-lg-left">
+                <a class="btn" href="https://drive.google.com/uc?export=download&id=1szIvMHzzLADqjAavY94GGioNWluhm09e">DESCARGA MI CV</a>
+            </div>
+        </article>
+        <article>
+            <img class="gray_scale" src="./src/images/foto-perfil1.png" alt="josue-img">
+        </article>
+        <article>
+            <h2 class="text-center text-lg-left">Mis Habilidades</h2>
+            <div class="progress">
+                <p>
+                    <b>Desarrollor <i>Web FrontEnd</i></b>
+                    <b>85%</b>
+                </p>
+                <progress value="85" min="0" max="100"></progress>
+            </div>
+            <div class="progress">
+                <p>
+                    <b><i>JavasCript</i></b>
+                    <b>85%</b>
+                </p>
+                <progress value="85" min="0" max="100"></progress>
+            </div>
+            <div class="progress">
+                <p>
+                    <b>Desarrollor <i>Web BackEnd</i></b>
+                    <b>80%</b>
+                </p>
+                <progress value="80" min="0" max="100"></progress>
+            </div>
+            <div class="progress">
+                <p>
+                    <b><i>SQL</i></b>
+                    <b>80%</b>
+                </p>
+                <progress value="80" min="0" max="100"></progress>
+            </div>
+        </article>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Servicios</h2>
+    </section>
+
+    <section id="portafolio" class="portfolio">
+        <h2>Trabajos</h2>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+        <h2>Testimonios</h2>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+    </section>
+    <footer class="footer">
+        <small>Sitio diseñado por <a href="" target="_blank" rel="noopener">Josue Ventura</a></small>
+    </footer>
+
+</body>
+<script src="./main.js"></script>
+</html>
