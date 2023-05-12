@@ -189,6 +189,49 @@ p {
     }
 }
 
+/*-------------------Modal-------------------*/
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-alpha-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal_content {
+    position: relative;
+}
+
+.modal_close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal_close h2 {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+}
+
+.modal[id|='trabajo']:target {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 1s;
+}
+
+.portfolio_modal {
+    width: 300px;
+}
+
 /*--------------------ProgressBar-------------------*/
 progress {
     width: 100%;
@@ -223,14 +266,19 @@ progress::-moz-progress-value {
 }
 
 /*--------------------Utilities-------------------*/
-.box-shadow_1 {
-    box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,0.25);
-} 
 
 .container {
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
+}
+
+.box-shadow_1 {
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0,0,0,0.25);
+} 
+
+.bg_gray_light {
+    background-color: var(--gray-light-color);
 }
 
 .btn {
@@ -256,6 +304,16 @@ progress::-moz-progress-value {
 
 .section_padding {
     padding: 2rem 1rem;
+}
+
+.section_title {
+    border-top: thin solid var(--first-color);
+    border-bottom: thin solid var(--first-color);
+    margin: 2rem auto;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    text-align: center;
+    color: var(--text-color);
 }
 
 .text-center {
@@ -316,8 +374,122 @@ progress::-moz-progress-value {
     text-decoration: none;
 }
 
+.portfolio_card {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.portfolio_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio_card_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--first-alpha-color);
+    color: var(--white-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.75s ease-in-out;
+}
+
+.portfolio_card:hover .portfolio_card_info {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.75s ease-in-out;
+}
+
+.portfolio_card_info > div {
+    padding: 1rem;
+    border: thin solid var(--white-color);
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio_modal {
+    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+}
+
+.portfolio_modal h3 {
+    border-bottom: medium solid var(--first-color);
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    color: var(--title-color);
+}
+
+.portfolio_details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem;
+}
+
+.portfolio_details b {
+    color: var(--first-color);
+}
+
+.services_card {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.services_card h3 {
+    color: var(--title-color);
+}
+
+.services_icon {
+    width: 50px;
+    aspect-ratio: 1;
+    border: thin solid var(--first-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1.25rem;
+    fill: var(--first-color);
+}
+
 @media screen and (min-width: 768px) {
+    .portfolio > .container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .portfolio .section_title {
+        grid-column: span 2;
+    }
+
+    .portfolio_modal {
+        max-width: 800px;
+        flex-direction: row;
+        
+    }
     
+    .portfolio_info {
+        margin-left: 1rem;
+        align-self: center;
+    }
+
+    .services > .container {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .services .section_title {
+        grid-column: span 2;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -332,5 +504,22 @@ progress::-moz-progress-value {
         top: 0;
         padding: 0.5rem;
         height: calc(var(--header-height) - 0.5rem);
+    }
+
+    .portfolio > .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio .section_title {
+        grid-column: span 3;
+    }
+
+    .services > .container {
+        grid-template-columns: repeat(3, 30%);
+        
+    }
+
+    .services .section_title {
+        grid-column: span 3;
     }
 }
