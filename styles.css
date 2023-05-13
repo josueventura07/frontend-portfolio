@@ -89,6 +89,65 @@ p {
 }
 
 /*--------------------Components-------------------*/
+
+/*--------------------Carousel-------------------*/
+.carousel {
+    margin: 2rem auto;
+    padding: 2rem 0;
+    max-width: 300px;
+    text-align: center;
+    background-color: var(--carousel_bg_color);
+    overflow: hidden;
+    
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel label {
+    border: medium solid var(--gray-dark-color);
+    border-radius: 50%;
+    margin: 0 0.25rem;
+    display: inline-block;
+    width: 0.75rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+
+}
+
+.carousel .slides {
+    padding-left: 0;
+    width: 400%;
+    display: flex;
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#slide-1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+    transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+    transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+    transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides_nav label#dot-1,
+#slide-2:checked ~ .slides_nav label#dot-2,
+#slide-3:checked ~ .slides_nav label#dot-3,
+#slide-4:checked ~ .slides_nav label#dot-4 {
+    background-color: var(--gray-dark-color);
+}
+
 /*--------------------Home Image-------------------*/
 .home_image {
     background-image: var(--home-image);
@@ -267,6 +326,13 @@ progress::-moz-progress-value {
 }
 
 /*--------------------Utilities-------------------*/
+.certificate_img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 2;
+    border-radius: 1rem;
+    object-fit: cover;
+}
 
 .container {
     margin-left: auto;
@@ -315,6 +381,10 @@ progress::-moz-progress-value {
     width: 250px;
     text-align: center;
     color: var(--text-color);
+}
+
+.text_first_color {
+    color: var(--first-color);
 }
 
 .text-center {
@@ -464,6 +534,16 @@ progress::-moz-progress-value {
 }
 
 @media screen and (min-width: 768px) {
+    .carousel {
+        max-width: 600px;
+        
+    }
+
+    .certificate_img {
+        max-width: 400px;
+        
+    }
+
     .portfolio > .container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
@@ -507,6 +587,17 @@ progress::-moz-progress-value {
         justify-content: space-between;
         align-content: center;
     }
+
+    .carousel {
+        max-width: 800px;
+        
+    }
+
+    .certificate_img {
+        max-width: 600px;
+        
+    }
+
     .header {
         position: sticky;
         top: 0;
