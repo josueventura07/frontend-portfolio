@@ -362,8 +362,55 @@
         </article>
     </section>
 
-    <section id="contacto" class="contact">
-        <h2>Contacto</h2>
+    <section id="contacto" class="contact section">
+        <div class="container">
+            <h2 class="section_title">¿Interesado?</h2>
+            <article class="contact_cards">
+                <aside class="contact_card box-shadow_1">
+                    <div>img</div>
+                    <h5>UBICACION</h5>
+                    <small>Esperanza, Valverde, Rep. Dom.</small>
+                </aside>
+                <aside class="contact_card box-shadow_1">
+                    <div>img</div>
+                    <h5>TELEFONO</h5>
+                    <small><a href="tel:8094817449">+1 (809)-481-7449</a></small>
+                </aside>
+                <aside class="contact_card box-shadow_1">
+                    <div>img</div>
+                    <h5>EMAIL</h5>
+                    <small><a href="mailto:josueandresventura@gmail.com">josueandresventura@gmail.com</a></small>
+                </aside>
+                <aside class="contact_card box-shadow_1">
+                    <div>img</div>
+                    <h5>SOCIAL MEDIA</h5>
+                    <small class="social_media"><a href="">
+                        icono de redes sociales
+                    </a></small>
+                </aside>
+            </article>
+            <form class="contact_form box-shadow_1">
+                <input type="text" name="name" placeholder="Ingresa tu nombre *" title="Nombre solo acepta letras y espacios en blanco" pattern="" required>
+                <input type="email" name="email" placeholder="Ingresa tu correo *" title="Email Incorrecto" pattern="" required>
+                <textarea name="comments" id="" cols="50" rows="10" placeholder="Dejame tus comentarios *" required></textarea>
+                <div class="contact_form-loader">
+                    <img src="" alt="Enviando...">
+                </div>
+                <input class="btn-send" type="submit" value="ENVIAR MENSAJE">
+            </form>
+            <article id="gracias" class="modal">
+                <div class="modal_content">
+                    <article class="contact_form-response">
+                        <h3>
+                            Muchas Gracias!
+                            <br>
+                            Por tus comentarios
+                        </h3>
+                        <img src="" alt="img">
+                    </article>
+                </div>
+            </article>
+        </div>
     </section>
     <footer class="footer">
         <small>Sitio diseñado por <a href="" target="_blank" rel="noopener">Josue Ventura</a></small>
