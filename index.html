@@ -80,17 +80,17 @@
             </div>
             <div class="progress">
                 <p>
-                    <b><i>JavasCript</i></b>
-                    <b>85%</b>
-                </p>
-                <progress value="85" min="0" max="100"></progress>
-            </div>
-            <div class="progress">
-                <p>
                     <b>Desarrollor <i>Web BackEnd</i></b>
                     <b>80%</b>
                 </p>
                 <progress value="80" min="0" max="100"></progress>
+            </div>
+            <div class="progress">
+                <p>
+                    <b><i>JavasCript</i></b>
+                    <b>85%</b>
+                </p>
+                <progress value="85" min="0" max="100"></progress>
             </div>
             <div class="progress">
                 <p>
@@ -362,9 +362,9 @@
         </article>
     </section>
 
-    <section id="contacto" class="contact section">
+    <section id="contacto" class="contact section_padding">
         <div class="container">
-            <h2 class="section_title">¿Interesado?</h2>
+            <h2 class="section_title">¿Interesad@?</h2>
             <article class="contact_cards">
                 <aside class="contact_card box-shadow_1">
                     <div>img</div>
@@ -393,20 +393,23 @@
                 <input type="text" name="name" placeholder="Ingresa tu nombre *" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                 <input type="email" name="email" placeholder="Ingresa tu correo *" title="Email Incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
                 <textarea name="comments" id="" cols="50" rows="10" placeholder="Dejame tus comentarios *" required></textarea>
-                <div class="contact_form-loader text-center none">
-                    <img src="" alt="Enviando...">
-                </div>
+                <div class="loader text-center none"><h1 class="loading_title">Loading...</h1></div>
                 <input class="btn" type="submit" value="ENVIAR MENSAJE">
             </form>
             <article id="gracias" class="modal">
                 <div class="modal_content">
                     <article class="contact_form-response">
                         <h3>
-                            Muchas Gracias!
+                            Gracias
                             <br>
-                            Por tus comentarios
+                            Por Comunicarte Conmigo!
                         </h3>
-                        <img src="" alt="img">
+                        <div class="icon_container">
+                            <div class="response_icon">
+                                <i class="face_icon fa-regular fa-face-smile"></i>
+                            </div>
+                            <i class="like_icon fa-regular fa-thumbs-up"></i>
+                       </div>
                     </article>
                 </div>
             </article>

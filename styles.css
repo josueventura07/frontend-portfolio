@@ -201,10 +201,14 @@ blockquote {
 }
 
 .contact_form-response {
-    padding: 1rem;
+    padding: 3rem 1rem;
     width: 400px;
     text-align: center;
     background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal#gracias:target {
@@ -225,7 +229,7 @@ blockquote {
     }
 
     .contact_form textarea,
-    .contact_form-loader {
+    .loader {
         grid-column: span 2;
     }
 
@@ -234,6 +238,104 @@ blockquote {
     }
 }
     
+/*--------------------Loader-------------------*/
+.loader {
+    width: 60px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-top: 4px solid var(--first-color); 
+    animation: rotate360 3s linear infinite;
+}
+
+
+
+.loading_title {
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    animation: rotateName360 3s linear infinite;
+}
+
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateName360 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/*--------------------Loader-------------------*/
+.icon_container {
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.response_icon {
+    width: 50px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px 1px #000;
+    rotate: -10deg;
+    animation: faceMove 2s ease-in-out infinite;
+}
+
+.face_icon {
+    display: block;
+    font-size: 58px;
+    color: rgb(175, 143, 2);
+    
+}
+
+.like_icon {
+    font-size: 35px;
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    rotate: -15deg;
+    display: inline-block;
+    animation: likeMove 2s ease-in-out infinite;
+    color: rgb(175, 143, 2);
+    text-shadow: 1px 2px 5px 1px #000;
+    /*reverse*/
+    /*-moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);*/
+}
+
+@keyframes likeMove {
+    to {
+        transform: translateY(-5px); 
+    
+    }
+    from {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes faceMove {
+    to {
+        transform: translateY(0px); 
+    
+    } from {
+        transform: translateY(10px);
+    }
+}
 
 
 /*--------------------Home Image-------------------*/
