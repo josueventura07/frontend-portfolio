@@ -611,6 +611,10 @@ progress::-moz-progress-value {
     margin-bottom: 2rem;
 }
 
+.contact {
+    padding-top: 6rem;
+}
+
 .contact_card {
     margin: 1rem auto;
     padding: 1rem;
@@ -648,6 +652,10 @@ progress::-moz-progress-value {
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
+}
+
+.portfolio {
+    padding-top: 6rem;
 }
 
 .portfolio_card {
@@ -750,9 +758,11 @@ progress::-moz-progress-value {
         justify-content: center;
     }
 
+   
     .portfolio > .container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        
     }
 
     .portfolio .section_title {
