@@ -403,7 +403,7 @@ blockquote {
 
 @media not all and (min-resolution:.001dpcm) {
     .safari_only {
-        background-attachment: fixed;
+        -webkit-mask-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
