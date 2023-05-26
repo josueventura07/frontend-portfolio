@@ -397,9 +397,12 @@ blockquote {
     background-image: var(--home-image);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
     background-position: center;
     background-attachment: var(--home-attachment);
 }
+
+
 
 .home_image_opacity {
     width: 100%;
