@@ -395,14 +395,12 @@ blockquote {
 /*--------------------Home Image-------------------*/
 .home_image {
     background-image: var(--home-image);
+    -webkit-background-origin: border-box;       
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: var(--home-attachment);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;   
 }
-
 
 .home_image_opacity {
     width: 100%;
