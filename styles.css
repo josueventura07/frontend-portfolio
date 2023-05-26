@@ -1,7 +1,7 @@
 /*--------------------Custom Properties-------------------*/
 :root {
-    --first-color: #d90062;
-    --first-alpha-color: rgba(217,0,98,0.75);
+    --first-color: #FC4F00;
+    --first-alpha-color: rgba(252, 79, 0, 0.70);
     --second-color: #14192d;
     --second-alpha-color: rgba(20,25,45,0.75);
     --third-color: #501464;
@@ -90,15 +90,69 @@ p {
 
 /*--------------------Components-------------------*/
 
+/*--------------------NavLogo-------------------*/
+.logo_container {
+    width: 45px;
+    aspect-ratio: 1;
+    color: var(--first-color);
+    border-radius: 50%;
+    border: var(--white-color) solid 6px;
+    position: relative;
+    z-index: 2000;
+    
+    
+    
+}
+
+.main_logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 2px;
+    
+    
+}
+
+.mini_logo {
+    position: absolute;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 10px;
+    font-size: 10px;
+    left: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words_logo {
+    position: absolute;
+    width: 100px;
+    font-size: 18px;
+    left: 150%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--first-color);
+    font-weight: bold;
+}
+
 /*--------------------Carousel-------------------*/
 blockquote {
     margin: auto;
-     
+    
 }    
 
 .carousel {
-    margin: 2rem auto;
-    padding: 2rem 0;
+    margin: 0 auto;
+    padding: 1rem 0;
     max-width: 800px;
     text-align: center;
     background-color: var(--carousel_bg_color);
@@ -517,8 +571,7 @@ progress::-moz-progress-value {
 
 /*--------------------Utilities-------------------*/
 .certificate_img {
-    max-width: 25%;
-    border-radius: 1rem;
+    max-width: 60%;
     object-fit: cover;
 }
 
