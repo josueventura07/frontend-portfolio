@@ -401,6 +401,15 @@ blockquote {
     background-position: center;
 }
 
+@media not all and (min-resolution:.001dpcm) {
+    .safari_only {
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+ }
+
 
 .home_image_opacity {
     width: 100%;
