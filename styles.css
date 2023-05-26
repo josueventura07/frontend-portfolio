@@ -403,7 +403,7 @@ blockquote {
 
 @media not all and (min-resolution:.001dpcm) {
     .safari_only {
-        background-image: var(--home-image);
+        background-image: url('./src/images/ryland-dean-rMyel7micAg-unsplash.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
