@@ -204,11 +204,18 @@ p {
     transform: translateX(-75%);
 }
 
+.slides_nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
 #slide-1:checked ~ .slides_nav label#dot-1,
 #slide-2:checked ~ .slides_nav label#dot-2,
 #slide-3:checked ~ .slides_nav label#dot-3,
 #slide-4:checked ~ .slides_nav label#dot-4 {
     background-color: var(--gray-dark-color);
+    
 }
 
 
@@ -899,6 +906,10 @@ progress::-moz-progress-value {
 
     .portfolio .section_title {
         grid-column: span 3;
+    }
+
+    .slides_nav {
+        gap: 0;
     }
 
     .services > .container {
