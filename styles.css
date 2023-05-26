@@ -328,7 +328,7 @@ blockquote {
     }
 }
 
-/*--------------------Loader-------------------*/
+/*--------------------Modal Gracias-------------------*/
 .icon_container {
     display: flex;
     position: relative;
@@ -395,11 +395,20 @@ blockquote {
 /*--------------------Home Image-------------------*/
 .home_image {
     background-image: var(--home-image);
-    -webkit-background-origin: border-box;       
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: var(--home-attachment);
+}
+
+@media not all and (min-resolution:.001dpcm) {
+    .safari_only {
+        background-image: var(--home-image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: var(--home-attachment);
+    }
 }
 
 .home_image_opacity {
