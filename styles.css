@@ -149,7 +149,7 @@ p {
 .carousel {
     margin: 0 auto;
     padding: 1rem 0;
-    max-width: 385px;
+    max-width: 380px;
     text-align: center;
     background-color: var(--carousel_bg_color);
     overflow: hidden;
