@@ -145,15 +145,11 @@ p {
 }
 
 /*--------------------Carousel-------------------*/
-blockquote {
-    margin: auto;
-    
-}    
 
 .carousel {
     margin: 0 auto;
     padding: 1rem 0;
-    max-width: 800px;
+    max-width: 385px;
     text-align: center;
     background-color: var(--carousel_bg_color);
     overflow: hidden;
@@ -176,14 +172,20 @@ blockquote {
 }
 
 .carousel .slides {
-    padding-left: 0;
     width: 400%;
+    padding-left: 0;
     display: flex;
     list-style: none;
     transition: transform 0.5s ease-in-out;
     
 }
 
+
+.slide blockquote {
+    margin: auto;
+    width: 70%;
+    
+} 
 
 
 #slide-1:checked ~ .slides {
@@ -208,6 +210,7 @@ blockquote {
 #slide-4:checked ~ .slides_nav label#dot-4 {
     background-color: var(--gray-dark-color);
 }
+
 
 /*--------------------Contact Form-------------------*/
 .contact_form {
@@ -403,7 +406,7 @@ blockquote {
 
 @media not all and (min-resolution:.001dpcm) {
     .safari_only {
-        -webkit-mask-attachment: fixed;
+        background-attachment: scroll;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -814,6 +817,18 @@ progress::-moz-progress-value {
     padding: 0 0.4rem;
 }
 
+@media screen and (min-width: 400px) {
+    .carousel {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .carousel {
+        max-width: 800px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .contact_cards {
         display: grid;
@@ -895,3 +910,4 @@ progress::-moz-progress-value {
         grid-column: span 3;
     }
 }
+
