@@ -395,21 +395,12 @@ blockquote {
 /*--------------------Home Image-------------------*/
 .home_image {
     background-image: var(--home-image);
+    background-attachment: var(--home-attachment);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: var(--home-attachment);
 }
 
-@media not all and (min-resolution:.001dpcm) {
-    .safari_only {
-        background-image: url('./src/images/ryland-dean-rMyel7micAg-unsplash.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: var(--home-attachment);
-    }
-}
 
 .home_image_opacity {
     width: 100%;
