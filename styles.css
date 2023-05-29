@@ -207,7 +207,8 @@ p {
 .slides_nav {
     display: flex;
     justify-content: center;
-    gap: 0.7rem;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 #slide-1:checked ~ .slides_nav label#dot-1,
@@ -215,7 +216,8 @@ p {
 #slide-3:checked ~ .slides_nav label#dot-3,
 #slide-4:checked ~ .slides_nav label#dot-4 {
     background-color: var(--gray-dark-color);
-    
+    width: 1.1rem;
+    transition: background-color 0.3s ease-in, width 0.3s ease-in;
 }
 
 
@@ -280,6 +282,7 @@ p {
     pointer-events: auto;
 }
 
+
 @media screen and (min-width: 1024px) {
     .contact_form {
         display: grid;
@@ -299,6 +302,11 @@ p {
 
     .contact_form input[type="submit"] {
         margin-left: 0;
+    }
+
+    .social_media {
+        display: flex;
+        padding-top: 1rem;
     }
 }
     
