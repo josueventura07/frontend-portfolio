@@ -216,12 +216,18 @@ p {
 #slide-3:checked ~ .slides_nav label#dot-3,
 #slide-4:checked ~ .slides_nav label#dot-4 {
     background-color: var(--gray-dark-color);
-    width: 1.1rem;
+    width: 0.9rem;
     transition: background-color 0.3s ease-in, width 0.3s ease-in;
 }
 
 
 /*--------------------Contact Form-------------------*/
+.contact_cards aside div svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--first-color);
+}
+
 .contact_form {
     margin: 2rem auto;
     padding: 1rem;
@@ -818,11 +824,9 @@ progress::-moz-progress-value {
     color: var(--title-color);
 }
 
-.services_icon {
+.services_icon svg {
     width: 50px;
-    aspect-ratio: 1;
-    border: thin solid var(--first-color);
-    border-radius: 0.5rem;
+    height: 50px;
     margin-bottom: 1.25rem;
     fill: var(--first-color);
 }
