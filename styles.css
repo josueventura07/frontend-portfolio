@@ -458,7 +458,21 @@ p {
     cursor: pointer;
     background-color: var(--second-color);
     font-size: 1.5rem;
+    
 }
+
+@media not all and (min-resolution:.001dpcm) {
+    .menu-btn {
+        outline: thin solid var(--first-color);
+        border: 0;
+        width: 40px;
+        aspect-ratio: 1;
+        cursor: pointer;
+        background-color: var(--second-color);
+        font-size: 1.5rem;
+        
+    }
+ }
 
 .menu-btn svg {
     width: 30px;
