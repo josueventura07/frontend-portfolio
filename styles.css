@@ -457,8 +457,13 @@ p {
     aspect-ratio: 1;
     cursor: pointer;
     background-color: var(--second-color);
-    color: var(--first-color);
     font-size: 1.5rem;
+}
+
+.menu-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--first-color);
 }
 
 .menu {
@@ -544,6 +549,7 @@ p {
 
 .modal_content {
     position: relative;
+    
 }
 
 
@@ -558,6 +564,12 @@ p {
     height: 3rem;
     fill: var(--first-color);
 }
+
+.modal_close svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--first-color); 
+}    
 
 .modal[id|='trabajo']:target {
     opacity: 1;
