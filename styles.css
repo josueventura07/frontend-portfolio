@@ -650,6 +650,12 @@ progress::-moz-progress-value {
     
 }
 
+.btn-univ svg {
+    width: 30px;
+    height: 30px;
+    
+}
+
 .gray_scale {
     filter: grayscale(1);
 }
