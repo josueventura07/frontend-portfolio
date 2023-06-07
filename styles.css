@@ -6,6 +6,7 @@
     --second-alpha-color: rgba(20,25,45,0.75);
     --third-color: #501464;
     --third-alpha-color: rgba(80,20,100,0.75);
+    --forth-color: #666D75;
     --white-color: #fff;
     --gray-light-color: #f3f3f3;
     --gray-color: #ccc;
@@ -41,6 +42,7 @@ body {
 }
 
 a {
+    text-decoration: none;
     color: var(--link-color);
     transition: all 0.5s ease-out;
 }
@@ -713,6 +715,21 @@ progress::-moz-progress-value {
 }
 
 /*--------------------Site Styles-------------------*/
+
+.academy_history {
+    margin-top: 1rem;
+    width: 220px;
+    
+}
+
+.academy_history a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
 .about > article {
     margin-bottom: 2rem;
 }
@@ -753,6 +770,45 @@ progress::-moz-progress-value {
     align-items: center;
 }
 
+.icons_tecnologies {
+    grid-column: 1fr;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.icons_traslate-container {
+    width: 200%;
+    display: flex;
+    
+}
+
+@keyframes iconsTraslate {
+    0% {
+        transform: translateX(0);
+    } 
+    
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.icons_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transform: translateX(0);
+    animation-name: iconsTraslate;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+}
+
+.icons_container svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--forth-color);
+}
+
+
 .logo a {
     color: var(--first-color);
     font-weight: bold;
@@ -767,14 +823,13 @@ progress::-moz-progress-value {
 .portfolio_card {
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     display: block;
     
 }
 
 .portfolio_card img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -822,6 +877,7 @@ progress::-moz-progress-value {
     padding: 0.5rem 0;
     color: var(--title-color);
 }
+
 
 .portfolio_details {
     display: grid;
@@ -875,6 +931,11 @@ progress::-moz-progress-value {
         justify-content: center;
     }
 
+    .icons_tecnologies {
+        grid-column: span 2;
+        
+        
+    }
    
     .portfolio > .container {
         display: grid;
@@ -934,6 +995,12 @@ progress::-moz-progress-value {
         top: 0;
         padding: 0.5rem;
         height: calc(var(--header-height) - 0.5rem);
+    }
+
+    .icons_tecnologies {
+        grid-column: span 3;
+        
+        
     }
 
     .portfolio {
