@@ -799,7 +799,8 @@ progress::-moz-progress-value {
     transform: translateX(0);
     animation-name: iconsTraslate;
     animation-iteration-count: infinite;
-    animation-duration: 60s;
+    animation-duration: 80s;
+    animation-timing-function: 0s ease-in-out;
 }
 
 .icons_container svg {
