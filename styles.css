@@ -590,7 +590,9 @@ progress {
     width: 100%;
     height: 1rem;
     background-color: var(--gray-color);
+    overflow: hidden;
 }
+
 
 progress::-webkit-progress-bar {
     background-color: var(--gray-color);
@@ -598,6 +600,13 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
     background-color: var(--gray-dark-color);
+    transform: translateX(-100%);
+    transition: transform 3s ease;
+}
+
+.moveBarAnimation::-webkit-progress-value {
+    transform: translateX(0%);
+    transition: transform 5s ease;
 }
 
 progress::-moz-progress-bar {
@@ -606,6 +615,8 @@ progress::-moz-progress-bar {
 
 progress::-moz-progress-value {
     background-color: var(--gray-dark-color);
+    transform: translateX(-100%);
+    transition: transform 5s ease;
 }
 
 .progress {
@@ -774,6 +785,7 @@ progress::-moz-progress-value {
     grid-column: 1fr;
     margin-top: 2rem;
     overflow: hidden;
+    
 }
 
 .icons_traslate-container {
@@ -784,7 +796,7 @@ progress::-moz-progress-value {
 
 @keyframes iconsTraslate {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     } 
     
     100% {
@@ -799,14 +811,16 @@ progress::-moz-progress-value {
     transform: translateX(0);
     animation-name: iconsTraslate;
     animation-iteration-count: infinite;
-    animation-duration: 80s;
-    animation-timing-function: 0s ease-in-out;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    
 }
 
 .icons_container svg {
     width: 50px;
     height: 50px;
     fill: var(--forth-color);
+    margin-left: 30px;
 }
 
 
@@ -843,6 +857,7 @@ progress::-moz-progress-value {
     padding: 1rem;
     background-color: var(--first-alpha-color);
     color: var(--white-color);
+    text-shadow: 2px 1px 3px #000;
     opacity: 0;
     pointer-events: none;
     transition: all 0.75s ease-in-out;
@@ -859,6 +874,10 @@ progress::-moz-progress-value {
     border: thin solid var(--white-color);
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio_modal {
@@ -908,6 +927,7 @@ progress::-moz-progress-value {
     fill: var(--first-color);
 }
 
+
 .social_media a {
     text-decoration: none;
     padding: 0 0.4rem;
@@ -936,6 +956,10 @@ progress::-moz-progress-value {
         grid-column: span 2;
         
         
+    }
+
+    .icons_container svg {
+        margin-left: 0;
     }
    
     .portfolio > .container {
