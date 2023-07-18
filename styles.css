@@ -509,7 +509,7 @@ p {
 
 .menu_selected {
     color: var(--white-color);
-    background-color: var(--first-color);
+    
 } 
 
 @media screen and (min-width: 1024px) {
