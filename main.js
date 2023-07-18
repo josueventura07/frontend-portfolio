@@ -1,4 +1,66 @@
-/*---------------Progress Bar Animation -------------*/
+/*---------------Nav List-------------*/
+
+const SelectedNav = ((d)=> {
+
+const NavList = d.querySelectorAll('.nav_list')
+const BtnHome = d.querySelector('.btn_home')
+const BtnAbout = d.querySelector('.btn_about')
+const BtnServices = d.querySelector('.btn_services')
+const BtnPortfolio = d.querySelector('.btn_portfolio')
+const BtnCertificates = d.querySelector('.btn_certificates')
+const BtnContact = d.querySelector('.btn_contact')
+
+    NavList.forEach(element => {
+        element.addEventListener('click', e => {
+            
+            if(e.target.name === 'home') {
+                BtnHome.classList.add('menu_selected')
+                BtnAbout.classList.remove('menu_selected')
+                BtnServices.classList.remove('menu_selected')
+                BtnPortfolio.classList.remove('menu_selected')
+                BtnCertificates.classList.remove('menu_selected')
+                BtnContact.classList.remove('menu_selected')
+            } else if(e.target.name === 'about') {
+                BtnAbout.classList.add('menu_selected')
+                BtnHome.classList.remove('menu_selected')
+                BtnServices.classList.remove('menu_selected')
+                BtnPortfolio.classList.remove('menu_selected')
+                BtnCertificates.classList.remove('menu_selected')
+                BtnContact.classList.remove('menu_selected')
+            } else if(e.target.name === 'services') {
+                BtnServices.classList.add('menu_selected')
+                BtnAbout.classList.remove('menu_selected')
+                BtnHome.classList.remove('menu_selected')
+                BtnPortfolio.classList.remove('menu_selected')
+                BtnCertificates.classList.remove('menu_selected')
+                BtnContact.classList.remove('menu_selected')
+            } else if(e.target.name === 'portfolio') {
+                BtnPortfolio.classList.add('menu_selected')
+                BtnServices.classList.remove('menu_selected')
+                BtnAbout.classList.remove('menu_selected')
+                BtnHome.classList.remove('menu_selected')
+                BtnCertificates.classList.remove('menu_selected')
+                BtnContact.classList.remove('menu_selected')
+            } else if(e.target.name === 'certificates') {
+                BtnCertificates.classList.add('menu_selected')
+                BtnPortfolio.classList.remove('menu_selected')
+                BtnServices.classList.remove('menu_selected')
+                BtnAbout.classList.remove('menu_selected')
+                BtnHome.classList.remove('menu_selected')
+                BtnContact.classList.remove('menu_selected')
+            } else if(e.target.name === 'contact') {
+                BtnContact.classList.add('menu_selected')
+                BtnCertificates.classList.remove('menu_selected')
+                BtnPortfolio.classList.remove('menu_selected')
+                BtnServices.classList.remove('menu_selected')
+                BtnAbout.classList.remove('menu_selected')
+                BtnHome.classList.remove('menu_selected')
+            }
+        })
+    })
+})(document)
+
+/*---------------Progress Bar Animation-------------*/
 const progressBar = document.querySelectorAll('.progress_bar')
 
 document.addEventListener('scroll', e => {
