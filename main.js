@@ -3,12 +3,6 @@
 const SelectedNav = ((d)=> {
 
 const NavList = d.querySelectorAll('.nav_list')
-const BtnHome = d.querySelector('.btn_home')
-const BtnAbout = d.querySelector('.btn_about')
-const BtnServices = d.querySelector('.btn_services')
-const BtnPortfolio = d.querySelector('.btn_portfolio')
-const BtnCertificates = d.querySelector('.btn_certificates')
-const BtnContact = d.querySelector('.btn_contact')
 
     NavList.forEach(element => {
         element.addEventListener('click', e => {
