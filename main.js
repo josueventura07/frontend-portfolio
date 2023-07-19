@@ -23,10 +23,9 @@ const NavList = d.querySelectorAll('.nav_list')
 const progressBar = document.querySelectorAll('.progress_bar')
 
 document.addEventListener('scroll', e => {
-    if(scrollY >= 800) {
+    if(scrollY >= 600) {
         progressBar.forEach(element => {
             element.classList.add('moveBarAnimation')
-                
         })
     } else {
         progressBar.forEach(element => {
