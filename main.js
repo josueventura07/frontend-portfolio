@@ -3,17 +3,19 @@
 const SelectedNav = ((d)=> {
 
 const NavList = d.querySelectorAll('.nav_list')
-
+   
     NavList.forEach(element => {
+
         element.addEventListener('click', e => {
-            
-            if(e.target) {
-                e.target.classList.add('menu_selected')
-                
-            } else {
-                e.target.classList.remove('menu_selected')
+
+            for (let index = 0; index < NavList.length; index++) {
+                NavList[index].classList.remove('menu_selected')    
             }
+           
+            e.target.classList.add('menu_selected')
+                                    
         })
+        
     })
 })(document)
 
@@ -21,7 +23,7 @@ const NavList = d.querySelectorAll('.nav_list')
 const progressBar = document.querySelectorAll('.progress_bar')
 
 document.addEventListener('scroll', e => {
-    if(scrollY >= 850) {
+    if(scrollY >= 800) {
         progressBar.forEach(element => {
             element.classList.add('moveBarAnimation')
                 

@@ -41,6 +41,7 @@ body {
     color: var(--text-color);
 }
 
+
 a {
     text-decoration: none;
     color: var(--link-color);
@@ -493,7 +494,7 @@ p {
     
 }
 
-.menu a {
+.nav_list {
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
@@ -502,15 +503,15 @@ p {
     color: var(--first-color);
 }
 
-.menu a:hover {
-    color: var(--white-color);
-    background-color: var(--first-color);
-}
-
 .menu_selected {
     color: var(--white-color);
-    
+    background-color: var(--first-color);     
 } 
+
+.menu a:hover {
+    color: var(--white-color);
+    background-color: var(--first-color); 
+}
 
 @media screen and (min-width: 1024px) {
     .menu-btn {
@@ -526,7 +527,7 @@ p {
         transform: translateY(0);
     }
 
-    .menu a {
+    .nav_list {
         padding: 0 1rem;
     }
 
@@ -537,6 +538,12 @@ p {
     .menu a:hover {
         background-color: transparent;
     }
+
+    .menu_selected {
+        color: var(--white-color);
+        background-color: transparent;     
+    }
+    
 }
 
 /*-------------------Modal-------------------*/
