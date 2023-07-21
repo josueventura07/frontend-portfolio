@@ -483,7 +483,6 @@ p {
     pointer-events: none;
     transform: translateY(100%);
     transition: transform 0.6s ease, opacity 0.5s ease;
-    
 }
 
 .menu.is-active {
@@ -512,6 +511,7 @@ p {
     color: var(--white-color);
     background-color: var(--first-color); 
 }
+
 
 @media screen and (min-width: 1024px) {
     .menu-btn {
@@ -825,7 +825,7 @@ progress::-moz-progress-value {
     animation-iteration-count: infinite;
     animation-duration: 40s;
     animation-timing-function: linear;
-    
+    transition: transform 2s;
 }
 
 .icons_container svg {
@@ -833,8 +833,13 @@ progress::-moz-progress-value {
     height: 50px;
     fill: var(--forth-color);
     margin-left: 30px;
+    transition: transform 2s;
 }
 
+.icons_container svg:hover {
+    transform: scale(0.8) translateY(-5px);
+    transition: transform 1s;
+}
 
 .logo a {
     color: var(--first-color);
@@ -937,6 +942,34 @@ progress::-moz-progress-value {
     height: 50px;
     margin-bottom: 1.25rem;
     fill: var(--first-color);
+    
+}
+
+.services_iconAnimation {
+    animation-name: servicesIconsAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    opacity: 1;
+    transition: transform 10ms;
+}
+
+
+@keyframes servicesIconsAnimation {
+    0% {
+        transform: scale(1) translateY(30px);
+        opacity: 0;
+        transition: transform 10ms opacity 5ms;
+    }
+    50% {
+        transform: scale(1.5);
+        transition: transform 5ms;
+    }
+    100% {
+        transform: scale(1);
+        transition: transform 10ms;
+    }
+    
 }
 
 
@@ -1019,6 +1052,7 @@ progress::-moz-progress-value {
         align-content: center;
     }
 
+   
     .contact {
         padding-top: 6rem;
     }
@@ -1034,6 +1068,7 @@ progress::-moz-progress-value {
         height: calc(var(--header-height) - 0.5rem);
     }
 
+    
     .icons_tecnologies {
         grid-column: span 3;
         

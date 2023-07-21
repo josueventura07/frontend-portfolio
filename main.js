@@ -21,6 +21,7 @@ const NavList = d.querySelectorAll('.nav_list')
 
 /*---------------Progress Bar Animation-------------*/
 const progressBar = document.querySelectorAll('.progress_bar')
+const ServicesIcon = document.querySelectorAll('.services_icon')
 
 document.addEventListener('scroll', e => {
     if(scrollY >= 600) {
@@ -31,7 +32,17 @@ document.addEventListener('scroll', e => {
         progressBar.forEach(element => {
             element.classList.remove('moveBarAnimation')
         })
-    }    
+    }
+    
+    if(scrollY >= 1600) {
+        ServicesIcon.forEach(element => {
+            element.classList.add('services_iconAnimation')
+        })
+    } else {
+        ServicesIcon.forEach(element => {
+            element.classList.remove('services_iconAnimation')
+        })
+    }
 })
 
 /*--------------------Menu-------------------*/
