@@ -209,6 +209,7 @@ p {
 
 .slides_nav {
     display: flex;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     
@@ -221,6 +222,13 @@ p {
     background-color: var(--gray-dark-color);
     width: 1.1rem;
     transition: background-color 0.3s ease-in, width 0.3s ease-in;
+}
+
+@media screen and (min-width: 1024px) {
+    .slides_nav {
+        gap: 0rem;
+        
+    }
 }
 
 /*--------------------Contact Form-------------------*/
@@ -449,8 +457,37 @@ p {
 
 .home_image_title {
     font-size: 7.5vw;
-    color: var(--home-text-color)
+    color: var(--home-text-color);
+    animation: greeting 2s ease-in-out 0.03s;
+    
+    
 }
+
+.home_contact_btn {
+    animation: greetingBtn 1s ease 0.01s;
+}
+
+@keyframes greeting {
+    0% {
+        transform: translateX(-1000%);
+    }
+    50% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes greetingBtn {
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 
 /*--------------------Menu-------------------*/
 .menu-btn {

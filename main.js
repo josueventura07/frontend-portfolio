@@ -24,6 +24,11 @@ const progressBar = document.querySelectorAll('.progress_bar')
 const ServicesIcon = document.querySelectorAll('.services_icon')
 
 document.addEventListener('scroll', e => {
+    
+    const screenValue = screen.width
+
+   if(screenValue >= 800) {
+    
     if(scrollY >= 600) {
         progressBar.forEach(element => {
             element.classList.add('moveBarAnimation')
@@ -43,6 +48,31 @@ document.addEventListener('scroll', e => {
             element.classList.remove('services_iconAnimation')
         })
     }
+   } 
+
+   if(screenValue < 800) {
+    
+    if(scrollY >= 1200) {
+        progressBar.forEach(element => {
+            element.classList.add('moveBarAnimation')
+        })
+    } else {
+        progressBar.forEach(element => {
+            element.classList.remove('moveBarAnimation')
+        })
+    }
+    
+    if(scrollY >= 2000) {
+        ServicesIcon.forEach(element => {
+            element.classList.add('services_iconAnimation')
+        })
+    } else {
+        ServicesIcon.forEach(element => {
+            element.classList.remove('services_iconAnimation')
+        })
+    }
+   } 
+    
 })
 
 /*--------------------Menu-------------------*/
